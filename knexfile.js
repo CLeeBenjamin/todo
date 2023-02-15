@@ -8,7 +8,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database: 'railway',
+      database: 'todo4',
       user:     'postgres',
       password: ''
     }
@@ -16,11 +16,8 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: {
-      database: 'railway',
-      user:     'postgres',
-      password: ''
-    },
+    connection: 'postgresql://postgres:f1ynjwcZwvCVSbPqlFAH@containers-us-west-32.railway.app:7290/railway'
+    ,
     pool: {
       min: 2,
       max: 10
