@@ -30,12 +30,16 @@ app.post('/todos', async (req,res) => {
     try{
         const {task} = req.body
         const allTodos = await pool.query("INSERT INTO todo(task) VALUES($1) RETURNING *", [task])
-        res.send("it works")
+        res.end()
     }
     catch (err) {
         console.error(err.message)
     }
 })
+
+console.log("checking env variables");
+
+console.log(process.env.NODE_ENV)
 
 app.listen(PORT, () => {
     console.log(`Server is running at ${PORT} `)
