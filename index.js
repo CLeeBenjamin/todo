@@ -37,7 +37,6 @@ app.post('/todos', async (req,res) => {
     }
 })
 
-console.log("checking env variables");
 
 console.log(process.env.NODE_ENV)
 
